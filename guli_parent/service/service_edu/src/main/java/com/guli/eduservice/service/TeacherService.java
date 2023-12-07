@@ -1,9 +1,9 @@
 package com.guli.eduservice.service;
 
-import com.guli.eduservice.entity.Teacher;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import com.guli.eduservice.entity.Teacher;
+import com.guli.eduservice.entity.vo.TeacherQuery;
 
 /**
  * <p>
@@ -15,5 +15,6 @@ import org.springframework.stereotype.Service;
  */
 
 public interface TeacherService extends IService<Teacher> {
+    Page<Teacher> page(int curr, int size, TeacherQuery teacherQuery);
 
 }
